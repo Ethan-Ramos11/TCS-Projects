@@ -4,7 +4,8 @@ import random
 
 class Deck:
     def __init__(self, numDecks):
-        self.deck = self.buildDecks(numDecks)
+        self.deck = []
+        self.buildDecks(numDecks)
         self.discard = []
 
     def buildDecks(self, numDecks):
@@ -15,6 +16,10 @@ class Deck:
         for suit in suits:
             for rank in ranks:
                 self.deck.append(Card(suit, rank))
+
+    def printDeck(self):
+        for card in self.deck:
+            print(card)
 
     def draw(self):
         if self.deck:
