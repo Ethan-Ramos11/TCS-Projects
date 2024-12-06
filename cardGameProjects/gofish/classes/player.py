@@ -1,4 +1,4 @@
-from card import Card
+from shared.card import Card
 
 
 class Player:
@@ -32,3 +32,4 @@ class Player:
             if card.getRank() in self.hand:
                 self.hand[card.getRank()] += 1
             print("Go fish")
+
