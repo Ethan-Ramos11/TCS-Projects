@@ -4,15 +4,20 @@ from card import Card
 class Player:
     def __init__(self, name):
         self.name = name
-        self.hand = self.buildHand()
+        self.cardCount = self.buildCardCount()
+        self.hand = []
         self.bookedSets = []
 
-    def buildHand(self):
+    def buildCardCount(self):
         hand = {}
         ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
         for rank in ranks:
             hand[rank] = 0
         return hand
+
+    def addCard(self, card):
+        self.hand.append(card)
+        self.cardCount[card.getRank] += 1
 
     def askForCard(self, player, card, deck):
         if card in player.hand and player.hand[card] > 0:

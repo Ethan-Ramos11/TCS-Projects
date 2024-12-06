@@ -1,4 +1,5 @@
-from card import Card
+from classes.card import Card
+
 import random
 
 
@@ -37,3 +38,7 @@ class Deck:
         for card in self.discard:
             self.deck.append(card)
         self.discard = []
+
+    def dealCards(players):
+        for player in players:
+            card = 
