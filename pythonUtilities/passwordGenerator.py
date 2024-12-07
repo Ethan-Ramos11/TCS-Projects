@@ -27,15 +27,15 @@ def validateInput(requirement):
     match requirement:
         case "con":
             val = input(
-                f"Do you want to generate another password? (yes/no): ")
+                "Do you want to generate another password? (yes/no): ")
         case "uppercase letters":
             val = input(
-                f"Do you want to include uppercase letters? (yes/no): ")
+                "Do you want to include uppercase letters? (yes/no): ")
         case "numbers":
-            val = input(f"Do you want to include numbers? (yes/no): ")
+            val = input("Do you want to include numbers? (yes/no): ")
         case "special characters":
             val = input(
-                f"Do you want to include special characters? (yes/no): ")
+                "Do you want to include special characters? (yes/no): ")
         case _:
             raise ValueError(f"Invalid requirement: {requirement}")
     val = val.strip().lower()
@@ -73,3 +73,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
